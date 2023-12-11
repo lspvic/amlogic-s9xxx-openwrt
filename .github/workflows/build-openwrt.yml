@@ -249,7 +249,7 @@ jobs:
               REPO_BRANCH=${REPO_BRANCH:-main}
               if [[ "${REPO_BRANCH}" == "main" ]]; then
                   TAGS_NAME=official_main_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")
-              else:
+              else
                   TAGS_NAME="official_${REPO_BRANCH}"
               fi
           elif [[ "${SOURCE_REPO}" == "lede" ]]; then
@@ -257,7 +257,7 @@ jobs:
               REPO_BRANCH=${REPO_BRANCH:-master}
               if [[ "${REPO_BRANCH}" == "master" ]]; then
                   TAGS_NAME=lede_master_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")
-              else:
+              else
                   TAGS_NAME="lede_${REPO_BRANCH}"
               fi
           elif [[ "${SOURCE_REPO}" == "immortalwrt" ]]; then
@@ -265,7 +265,7 @@ jobs:
               REPO_BRANCH=${REPO_BRANCH:-master}
               if [[ "${REPO_BRANCH}" == "master" ]]; then
                   TAGS_NAME=immortalwrt_master_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")
-              else:
+              else
                   TAGS_NAME="immortalwrt_${REPO_BRANCH}"
               fi
           else
