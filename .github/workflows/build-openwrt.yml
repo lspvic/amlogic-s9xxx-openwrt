@@ -18,6 +18,9 @@ on:
           - openwrt-main
           - lede-master
           - immortalwrt-master
+          - openwrt-v23.05.2
+          - openwrt-v22.03.6
+          - immortalwrt-v23.05.1
       openwrt_board:
         description: "Select device board"
         required: false
@@ -196,7 +199,7 @@ on:
         options:
           - ophub
           - angel
-          - yourname
+          - lspvic
 
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
@@ -239,19 +242,32 @@ jobs:
         working-directory: /workdir
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         run: |
+          IFS=- read -r SOURCE_REPO REPO_BRANCH <<< "${{ inputs.source_branch }}"
           # Set up compilation source code
-          if [[ "${{ inputs.source_branch }}" == *"openwrt"* ]]; then
+          if [[ "${SOURCE_REPO}" == "openwrt" ]]; then
               REPO_URL="https://github.com/openwrt/openwrt"
-              REPO_BRANCH="main"
-              TAGS_NAME="official"
-          elif [[ "${{ inputs.source_branch }}" == *"lede"* ]]; then
+              REPO_BRANCH=${REPO_BRANCH:-main}
+              if [[ "${REPO_BRANCH}" == "main" ]]; then
+                  TAGS_NAME=official_main_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")
+              else:
+                  TAGS_NAME="official_${REPO_BRANCH}"
+              fi
+          elif [[ "${SOURCE_REPO}" == "lede" ]]; then
               REPO_URL="https://github.com/coolsnowwolf/lede"
-              REPO_BRANCH="master"
-              TAGS_NAME="lede"
-          elif [[ "${{ inputs.source_branch }}" == *"immortalwrt"* ]]; then
+              REPO_BRANCH=${REPO_BRANCH:-master}
+              if [[ "${REPO_BRANCH}" == "master" ]]; then
+                  TAGS_NAME=lede_master_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")
+              else:
+                  TAGS_NAME="lede_${REPO_BRANCH}"
+              fi
+          elif [[ "${SOURCE_REPO}" == "immortalwrt" ]]; then
               REPO_URL="https://github.com/immortalwrt/immortalwrt"
-              REPO_BRANCH="master"
-              TAGS_NAME="immortalwrt"
+              REPO_BRANCH=${REPO_BRANCH:-master}
+              if [[ "${REPO_BRANCH}" == "master" ]]; then
+                  TAGS_NAME=immortalwrt_master_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")
+              else:
+                  TAGS_NAME="immortalwrt_${REPO_BRANCH}"
+              fi
           else
               echo "Unknown source code repository."
               exit 1
@@ -262,7 +278,7 @@ jobs:
           ln -sf /workdir/openwrt ${GITHUB_WORKSPACE}/openwrt
 
           # Set output information
-          echo "build_tag=OpenWrt_${TAGS_NAME}_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")" >> ${GITHUB_OUTPUT}
+          echo "build_tag=OpenWrt_${TAGS_NAME}" >> ${GITHUB_OUTPUT}
           echo -e "REPO_URL: [ ${REPO_URL} ]\nREPO_BRANCH: [ ${REPO_BRANCH} ]\nTAGS_NAME: [ ${TAGS_NAME} ]"
           df -hT ${PWD}
           echo "status=success" >> ${GITHUB_OUTPUT}
