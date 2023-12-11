@@ -24,11 +24,11 @@ echo "DISTRIB_SOURCECODE='immortalwrt'" >>package/base-files/files/etc/openwrt_r
 #
 # Add luci-app-amlogic
 rm -rf package/luci-app-amlogic
-git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
+git clone --depth 1 https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 #
 # Add openclash
 rm -rf package/luci-app-openclash
-git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git clone --depth 1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 #
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
