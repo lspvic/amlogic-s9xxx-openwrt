@@ -134,8 +134,7 @@ CONFIG_VIRTIO_SUPPORT=y
 CONFIG_USES_ROOTFS_PART=y
 CONFIG_USES_BOOT_PART=y
 CONFIG_aarch64=y
-CONFIG_ARCH="aarch64"
-
+        list bt_tracker 'CONFIG_ARCH="aarch64"'
 #
 # Target Images
 #
@@ -149,14 +148,12 @@ CONFIG_TARGET_INITRAMFS_COMPRESSION_NONE=y
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_XZ is not set
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_ZSTD is not set
 CONFIG_EXTERNAL_CPIO=""
-# CONFIG_TARGET_INITRAMFS_FORCE is not set
-
+        list bt_tracker '# CONFIG_TARGET_INITRAMFS_FORCE is not set'
 #
 # Root filesystem archives
 #
 # CONFIG_TARGET_ROOTFS_CPIOGZ is not set
-CONFIG_TARGET_ROOTFS_TARGZ=y
-
+        list bt_tracker 'CONFIG_TARGET_ROOTFS_TARGZ=y'
 #
 # Root filesystem images
 #
@@ -165,18 +162,15 @@ CONFIG_TARGET_ROOTFS_TARGZ=y
 CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
 CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
 CONFIG_TARGET_SERIAL="ttyS0"
-# CONFIG_TARGET_IMAGES_GZIP is not set
-
+        list bt_tracker '# CONFIG_TARGET_IMAGES_GZIP is not set'
 #
 # Image Options
 #
 CONFIG_TARGET_KERNEL_PARTSIZE=128
 CONFIG_TARGET_ROOTFS_PARTSIZE=512
 # CONFIG_TARGET_ROOTFS_PERSIST_VAR is not set
-# end of Target Images
-
-# CONFIG_EXPERIMENTAL is not set
-
+        list bt_tracker '# end of Target Images'
+        list bt_tracker '# CONFIG_EXPERIMENTAL is not set'
 #
 # Global build settings
 #
@@ -188,8 +182,7 @@ CONFIG_JSON_OVERVIEW_IMAGE_INFO=y
 # CONFIG_BUILDBOT is not set
 CONFIG_SIGNED_PACKAGES=y
 CONFIG_SIGNATURE_CHECK=y
-CONFIG_DOWNLOAD_CHECK_CERTIFICATE=y
-
+        list bt_tracker 'CONFIG_DOWNLOAD_CHECK_CERTIFICATE=y'
 #
 # General build options
 #
@@ -200,8 +193,7 @@ CONFIG_SHADOW_PASSWORDS=y
 # CONFIG_CLEAN_IPKG is not set
 # CONFIG_IPK_FILES_CHECKSUMS is not set
 # CONFIG_REPRODUCIBLE_DEBUG_INFO is not set
-# CONFIG_COLLECT_KERNEL_DEBUG is not set
-
+        list bt_tracker '# CONFIG_COLLECT_KERNEL_DEBUG is not set'
 #
 # Kernel build options
 #
@@ -321,8 +313,7 @@ CONFIG_KERNEL_IPV6_SEG6_LWTUNNEL=y
 # CONFIG_KERNEL_WEXT_SPY is not set
 CONFIG_KERNEL_PAGE_POOL=y
 # CONFIG_KERNEL_PAGE_POOL_STATS is not set
-# CONFIG_KERNEL_IP_PNP is not set
-
+        list bt_tracker '# CONFIG_KERNEL_IP_PNP is not set'
 #
 # Filesystem ACL and attr support options
 #
@@ -343,8 +334,7 @@ CONFIG_KERNEL_EXT4_FS_POSIX_ACL=y
 # CONFIG_KERNEL_REISER_FS_POSIX_ACL is not set
 # CONFIG_KERNEL_XFS_POSIX_ACL is not set
 # CONFIG_KERNEL_JFS_POSIX_ACL is not set
-# end of Filesystem ACL and attr support options
-
+        list bt_tracker '# end of Filesystem ACL and attr support options'
 # CONFIG_KERNEL_DEVMEM is not set
 # CONFIG_KERNEL_DEVKMEM is not set
 CONFIG_KERNEL_SQUASHFS_FRAGMENT_CACHE_SIZE=3
@@ -360,8 +350,7 @@ CONFIG_KERNEL_EXT4_FS_SECURITY=y
 # CONFIG_KERNEL_UBIFS_FS_SECURITY is not set
 # CONFIG_KERNEL_JFFS2_FS_SECURITY is not set
 # CONFIG_KERNEL_WERROR is not set
-# end of Kernel build options
-
+        list bt_tracker '# end of Kernel build options'
 #
 # Package build options
 #
@@ -370,8 +359,7 @@ CONFIG_KERNEL_EXT4_FS_SECURITY=y
 # CONFIG_USE_LTO is not set
 CONFIG_MOLD=y
 # CONFIG_USE_MOLD is not set
-CONFIG_IPV6=y
-
+        list bt_tracker 'CONFIG_IPV6=y'
 #
 # Stripping options
 #
@@ -380,8 +368,7 @@ CONFIG_IPV6=y
 CONFIG_USE_SSTRIP=y
 CONFIG_SSTRIP_DISCARD_TRAILING_ZEROES=y
 # CONFIG_STRIP_KERNEL_EXPORTS is not set
-# CONFIG_USE_MKLIBS is not set
-
+        list bt_tracker '# CONFIG_USE_MKLIBS is not set'
 #
 # Hardening build options
 #
@@ -405,8 +392,7 @@ CONFIG_PKG_FORTIFY_SOURCE_1=y
 CONFIG_PKG_RELRO_FULL=y
 # CONFIG_SELINUX is not set
 CONFIG_SECCOMP=y
-# end of Global build settings
-
+        list bt_tracker '# end of Global build settings'
 # CONFIG_DEVEL is not set
 CONFIG_BINARY_FOLDER=""
 CONFIG_DOWNLOAD_TOOL_CUSTOM=""
@@ -460,8 +446,7 @@ CONFIG_PER_FEED_REPO=y
 CONFIG_FEED_packages=y
 CONFIG_FEED_luci=y
 CONFIG_FEED_routing=y
-CONFIG_FEED_telephony=y
-
+        list bt_tracker 'CONFIG_FEED_telephony=y'
 #
 # Base system
 #
@@ -1569,8 +1554,7 @@ CONFIG_PACKAGE_dnsmasq_full_conntrack=y
 CONFIG_PACKAGE_dnsmasq_full_noid=y
 # CONFIG_PACKAGE_dnsmasq_full_broken_rtc is not set
 CONFIG_PACKAGE_dnsmasq_full_tftp=y
-CONFIG_PACKAGE_dropbear=y
-
+        list bt_tracker 'CONFIG_PACKAGE_dropbear=y'
 #
 # Configuration
 #
@@ -1584,8 +1568,7 @@ CONFIG_DROPBEAR_DBCLIENT_AGENTFORWARD=y
 CONFIG_DROPBEAR_SCP=y
 # CONFIG_DROPBEAR_ASKPASS is not set
 CONFIG_DROPBEAR_AGENTFORWARD=y
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_ead is not set
 # CONFIG_PACKAGE_firewall is not set
 CONFIG_PACKAGE_firewall4=y
@@ -1608,14 +1591,12 @@ CONFIG_PACKAGE_netifd=y
 # CONFIG_PACKAGE_nft-qos is not set
 CONFIG_PACKAGE_openwrt-keyring=y
 CONFIG_PACKAGE_opkg=y
-CONFIG_PACKAGE_procd=y
-
+        list bt_tracker 'CONFIG_PACKAGE_procd=y'
 #
 # Configuration
 #
 # CONFIG_PROCD_SHOW_BOOT is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 CONFIG_PACKAGE_procd-seccomp=y
 # CONFIG_PACKAGE_procd-selinux is not set
 CONFIG_PACKAGE_procd-ujail=y
@@ -1648,12 +1629,10 @@ CONFIG_PACKAGE_usign=y
 CONFIG_PACKAGE_wireless-tools=y
 # CONFIG_PACKAGE_zram-swap is not set
 # CONFIG_PACKAGE_zyxel-bootconfig is not set
-# end of Base system
-
+        list bt_tracker '# end of Base system'
 #
 # Administration
-#
-
+        list bt_tracker '#'
 #
 # Zabbix
 #
@@ -1666,8 +1645,7 @@ CONFIG_PACKAGE_wireless-tools=y
 # CONFIG_PACKAGE_zabbix-get is not set
 # CONFIG_PACKAGE_zabbix-get-gnutls is not set
 # CONFIG_PACKAGE_zabbix-get-openssl is not set
-# CONFIG_PACKAGE_zabbix-proxy is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_zabbix-proxy is not set'
 #
 # Database Software
 #
@@ -1683,16 +1661,14 @@ CONFIG_ZABBIX_POSTGRESQL=y
 # CONFIG_PACKAGE_zabbix-server-frontend is not set
 # CONFIG_PACKAGE_zabbix-server-gnutls is not set
 # CONFIG_PACKAGE_zabbix-server-openssl is not set
-# end of Zabbix
-
+        list bt_tracker '# end of Zabbix'
 #
 # openwisp
 #
 # CONFIG_PACKAGE_netjson-monitoring is not set
 # CONFIG_PACKAGE_openwisp-config is not set
 # CONFIG_PACKAGE_openwisp-monitoring is not set
-# end of openwisp
-
+        list bt_tracker '# end of openwisp'
 # CONFIG_PACKAGE_atop is not set
 # CONFIG_PACKAGE_backuppc is not set
 # CONFIG_PACKAGE_bottom is not set
@@ -1711,8 +1687,7 @@ CONFIG_ZABBIX_POSTGRESQL=y
 # CONFIG_PACKAGE_nload is not set
 # CONFIG_PACKAGE_nyx is not set
 # CONFIG_PACKAGE_rsyslog is not set
-# CONFIG_PACKAGE_schroot is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_schroot is not set'
 #
 # Configuration
 #
@@ -1720,31 +1695,26 @@ CONFIG_ZABBIX_POSTGRESQL=y
 # CONFIG_SCHROOT_LOOPBACK is not set
 # CONFIG_SCHROOT_LVM is not set
 # CONFIG_SCHROOT_UUID is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_sudo is not set
 # CONFIG_PACKAGE_syslog-ng is not set
-# end of Administration
-
+        list bt_tracker '# end of Administration'
 #
 # Boot Loaders
 #
 # CONFIG_PACKAGE_grub2-efi-arm is not set
 CONFIG_PACKAGE_u-boot-qemu_armv8=y
-# end of Boot Loaders
-
+        list bt_tracker '# end of Boot Loaders'
 #
 # Development
-#
-
+        list bt_tracker '#'
 #
 # Libraries
 #
 # CONFIG_PACKAGE_libncurses-dev is not set
 # CONFIG_PACKAGE_libxml2-dev is not set
 # CONFIG_PACKAGE_zlib-dev is not set
-# end of Libraries
-
+        list bt_tracker '# end of Libraries'
 # CONFIG_PACKAGE_ar is not set
 # CONFIG_PACKAGE_autoconf is not set
 # CONFIG_PACKAGE_automake is not set
@@ -1773,8 +1743,7 @@ CONFIG_PACKAGE_u-boot-qemu_armv8=y
 # CONFIG_PACKAGE_trace-cmd is not set
 # CONFIG_PACKAGE_trace-cmd-extra is not set
 # CONFIG_PACKAGE_valgrind is not set
-# end of Development
-
+        list bt_tracker '# end of Development'
 #
 # Extra packages
 #
@@ -1789,17 +1758,14 @@ CONFIG_PACKAGE_libiwinfo-data=y
 # CONFIG_PACKAGE_nginx-mod-luci-ssl is not set
 # CONFIG_PACKAGE_nginx-util is not set
 # CONFIG_PACKAGE_tang is not set
-# end of Extra packages
-
+        list bt_tracker '# end of Extra packages'
 #
 # Firmware
-#
-
+        list bt_tracker '#'
 #
 # ath10k Board-Specific Overrides
 #
-# end of ath10k Board-Specific Overrides
-
+        list bt_tracker '# end of ath10k Board-Specific Overrides'
 # CONFIG_PACKAGE_aircard-pcmcia-firmware is not set
 # CONFIG_PACKAGE_amdgpu-firmware is not set
 # CONFIG_PACKAGE_ar3k-firmware is not set
@@ -1981,12 +1947,10 @@ CONFIG_PACKAGE_rtl8822ce-firmware=y
 CONFIG_PACKAGE_wireless-regdb=y
 # CONFIG_PACKAGE_wl12xx-firmware is not set
 # CONFIG_PACKAGE_wl18xx-firmware is not set
-# end of Firmware
-
+        list bt_tracker '# end of Firmware'
 #
 # Fonts
-#
-
+        list bt_tracker '#'
 #
 # DejaVu
 #
@@ -2013,12 +1977,10 @@ CONFIG_PACKAGE_wireless-regdb=y
 # CONFIG_PACKAGE_dejavu-fonts-ttf-DejaVuSerifCondensed-BoldItalic is not set
 # CONFIG_PACKAGE_dejavu-fonts-ttf-DejaVuSerifCondensed-Italic is not set
 # end of DejaVu
-# end of Fonts
-
+        list bt_tracker '# end of Fonts'
 #
 # Kernel modules
-#
-
+        list bt_tracker '#'
 #
 # Block Devices
 #
@@ -2047,14 +2009,12 @@ CONFIG_PACKAGE_kmod-dm=y
 CONFIG_PACKAGE_kmod-scsi-core=y
 # CONFIG_PACKAGE_kmod-scsi-generic is not set
 # CONFIG_PACKAGE_kmod-scsi-tape is not set
-# end of Block Devices
-
+        list bt_tracker '# end of Block Devices'
 #
 # CAN Support
 #
 # CONFIG_PACKAGE_kmod-can is not set
-# end of CAN Support
-
+        list bt_tracker '# end of CAN Support'
 #
 # Cryptographic API modules
 #
@@ -2103,8 +2063,7 @@ CONFIG_PACKAGE_kmod-crypto-user=y
 # CONFIG_PACKAGE_kmod-crypto-xcbc is not set
 # CONFIG_PACKAGE_kmod-crypto-xts is not set
 CONFIG_PACKAGE_kmod-cryptodev=y
-# end of Cryptographic API modules
-
+        list bt_tracker '# end of Cryptographic API modules'
 #
 # Filesystems
 #
@@ -2144,20 +2103,17 @@ CONFIG_PACKAGE_kmod-fs-vfat=y
 CONFIG_PACKAGE_kmod-fs-xfs=y
 CONFIG_PACKAGE_kmod-fuse=y
 # CONFIG_PACKAGE_kmod-pstore is not set
-# end of Filesystems
-
+        list bt_tracker '# end of Filesystems'
 #
 # FireWire support
 #
 # CONFIG_PACKAGE_kmod-firewire is not set
-# end of FireWire support
-
+        list bt_tracker '# end of FireWire support'
 #
 # GPIO support
 #
 # CONFIG_PACKAGE_kmod-gpio-cascade is not set
-# end of GPIO support
-
+        list bt_tracker '# end of GPIO support'
 #
 # Hardware Monitoring Support
 #
@@ -2201,8 +2157,7 @@ CONFIG_PACKAGE_kmod-hwmon-core=y
 # CONFIG_PACKAGE_kmod-hwmon-w83793 is not set
 # CONFIG_PACKAGE_kmod-pmbus-core is not set
 # CONFIG_PACKAGE_kmod-pmbus-zl6100 is not set
-# end of Hardware Monitoring Support
-
+        list bt_tracker '# end of Hardware Monitoring Support'
 #
 # I2C support
 #
@@ -2220,8 +2175,7 @@ CONFIG_PACKAGE_kmod-i2c-mux-pca954x=y
 # CONFIG_PACKAGE_kmod-i2c-pxa is not set
 # CONFIG_PACKAGE_kmod-i2c-smbus is not set
 # CONFIG_PACKAGE_kmod-i2c-tiny-usb is not set
-# end of I2C support
-
+        list bt_tracker '# end of I2C support'
 #
 # Industrial I/O Modules
 #
@@ -2257,8 +2211,7 @@ CONFIG_PACKAGE_kmod-i2c-mux-pca954x=y
 # CONFIG_PACKAGE_kmod-iio-st_accel-spi is not set
 # CONFIG_PACKAGE_kmod-iio-tsl4531 is not set
 # CONFIG_PACKAGE_kmod-industrialio-triggered-buffer is not set
-# end of Industrial I/O Modules
-
+        list bt_tracker '# end of Industrial I/O Modules'
 #
 # Input modules
 #
@@ -2274,8 +2227,7 @@ CONFIG_PACKAGE_kmod-input-evdev=y
 # CONFIG_PACKAGE_kmod-input-touchscreen-ads7846 is not set
 # CONFIG_PACKAGE_kmod-input-touchscreen-edt-ft5x06 is not set
 # CONFIG_PACKAGE_kmod-input-uinput is not set
-# end of Input modules
-
+        list bt_tracker '# end of Input modules'
 #
 # LED modules
 #
@@ -2293,8 +2245,7 @@ CONFIG_PACKAGE_kmod-input-evdev=y
 # CONFIG_PACKAGE_kmod-ledtrig-pattern is not set
 # CONFIG_PACKAGE_kmod-ledtrig-transient is not set
 # CONFIG_PACKAGE_kmod-ledtrig-tty is not set
-# end of LED modules
-
+        list bt_tracker '# end of LED modules'
 #
 # Libraries
 #
@@ -2319,14 +2270,12 @@ CONFIG_PACKAGE_kmod-lib-zlib-deflate=y
 CONFIG_PACKAGE_kmod-lib-zlib-inflate=y
 CONFIG_PACKAGE_kmod-lib-zstd=y
 CONFIG_PACKAGE_kmod-oid-registry=y
-# end of Libraries
-
+        list bt_tracker '# end of Libraries'
 #
 # Multiplexer Support
 #
 # CONFIG_PACKAGE_kmod-mux-core is not set
-# end of Multiplexer Support
-
+        list bt_tracker '# end of Multiplexer Support'
 #
 # Native Language Support
 #
@@ -2351,8 +2300,7 @@ CONFIG_PACKAGE_kmod-nls-iso8859-1=y
 # CONFIG_PACKAGE_kmod-nls-iso8859-8 is not set
 # CONFIG_PACKAGE_kmod-nls-koi8r is not set
 CONFIG_PACKAGE_kmod-nls-utf8=y
-# end of Native Language Support
-
+        list bt_tracker '# end of Native Language Support'
 #
 # Netfilter Extensions
 #
@@ -2460,8 +2408,7 @@ CONFIG_PACKAGE_kmod-nft-offload=y
 CONFIG_PACKAGE_kmod-nft-tproxy=y
 # CONFIG_PACKAGE_kmod-nft-xfrm is not set
 # CONFIG_PACKAGE_kmod-oaf is not set
-# end of Netfilter Extensions
-
+        list bt_tracker '# end of Netfilter Extensions'
 #
 # Network Devices
 #
@@ -2589,8 +2536,7 @@ CONFIG_PACKAGE_kmod-thunderx-net=y
 # CONFIG_PACKAGE_kmod-via-velocity is not set
 CONFIG_PACKAGE_kmod-vmxnet3=y
 # CONFIG_PACKAGE_kmod-wwan is not set
-# end of Network Devices
-
+        list bt_tracker '# end of Network Devices'
 #
 # Network Support
 #
@@ -2679,8 +2625,7 @@ CONFIG_PACKAGE_kmod-tun=y
 CONFIG_PACKAGE_kmod-veth=y
 # CONFIG_PACKAGE_kmod-vxlan is not set
 CONFIG_PACKAGE_kmod-wireguard=y
-# end of Network Support
-
+        list bt_tracker '# end of Network Support'
 #
 # Other modules
 #
@@ -2756,13 +2701,11 @@ CONFIG_PACKAGE_kmod-tpm=y
 # CONFIG_PACKAGE_kmod-ubootenv-nvram is not set
 CONFIG_PACKAGE_kmod-wdt-sp805=y
 # CONFIG_PACKAGE_kmod-zram is not set
-# end of Other modules
-
+        list bt_tracker '# end of Other modules'
 #
 # PCMCIA support
 #
-# end of PCMCIA support
-
+        list bt_tracker '# end of PCMCIA support'
 #
 # SPI Support
 #
@@ -2770,14 +2713,12 @@ CONFIG_PACKAGE_kmod-wdt-sp805=y
 # CONFIG_PACKAGE_kmod-spi-bitbang is not set
 # CONFIG_PACKAGE_kmod-spi-dev is not set
 # CONFIG_PACKAGE_kmod-spi-gpio is not set
-# end of SPI Support
-
+        list bt_tracker '# end of SPI Support'
 #
 # Sound Support
 #
 # CONFIG_PACKAGE_kmod-sound-core is not set
-# end of Sound Support
-
+        list bt_tracker '# end of Sound Support'
 #
 # USB Support
 #
@@ -2865,8 +2806,7 @@ CONFIG_PACKAGE_kmod-usbip=y
 CONFIG_PACKAGE_kmod-usbip-client=y
 CONFIG_PACKAGE_kmod-usbip-server=y
 CONFIG_PACKAGE_kmod-usbmon=y
-# end of USB Support
-
+        list bt_tracker '# end of USB Support'
 #
 # Video Support
 #
@@ -2887,8 +2827,7 @@ CONFIG_PACKAGE_kmod-usbmon=y
 # CONFIG_PACKAGE_kmod-multimedia-input is not set
 # CONFIG_PACKAGE_kmod-video-core is not set
 # CONFIG_PACKAGE_kmod-v4l2loopback is not set
-# end of Video Support
-
+        list bt_tracker '# end of Video Support'
 #
 # Virtualization
 #
@@ -2896,20 +2835,17 @@ CONFIG_PACKAGE_kmod-usbmon=y
 # CONFIG_PACKAGE_kmod-vfio-pci is not set
 # CONFIG_PACKAGE_kmod-vhost is not set
 # CONFIG_PACKAGE_kmod-vhost-net is not set
-# end of Virtualization
-
+        list bt_tracker '# end of Virtualization'
 #
 # Voice over IP
 #
 # CONFIG_PACKAGE_kmod-dahdi is not set
-# end of Voice over IP
-
+        list bt_tracker '# end of Voice over IP'
 #
 # W1 support
 #
 # CONFIG_PACKAGE_kmod-w1 is not set
-# end of W1 support
-
+        list bt_tracker '# end of W1 support'
 #
 # WPAN 802.15.4 Support
 #
@@ -2922,8 +2858,7 @@ CONFIG_PACKAGE_kmod-usbmon=y
 # CONFIG_PACKAGE_kmod-ieee802154-6lowpan is not set
 # CONFIG_PACKAGE_kmod-mac802154 is not set
 # CONFIG_PACKAGE_kmod-mrf24j40 is not set
-# end of WPAN 802.15.4 Support
-
+        list bt_tracker '# end of WPAN 802.15.4 Support'
 #
 # Wireless Drivers
 #
@@ -3050,15 +2985,12 @@ CONFIG_PACKAGE_kmod-rtlwifi-usb=y
 # CONFIG_PACKAGE_kmod-wl12xx is not set
 # CONFIG_PACKAGE_kmod-wl18xx is not set
 # CONFIG_PACKAGE_kmod-wlcore is not set
-# end of Wireless Drivers
-
+        list bt_tracker '# end of Wireless Drivers'
 CONFIG_PACKAGE_kmod-cdrom=y
-# end of Kernel modules
-
+        list bt_tracker '# end of Kernel modules'
 #
 # Languages
-#
-
+        list bt_tracker '#'
 #
 # Erlang
 #
@@ -3079,28 +3011,24 @@ CONFIG_PACKAGE_kmod-cdrom=y
 # CONFIG_PACKAGE_erlang-syntax-tools is not set
 # CONFIG_PACKAGE_erlang-tools is not set
 # CONFIG_PACKAGE_erlang-xmerl is not set
-# end of Erlang
-
+        list bt_tracker '# end of Erlang'
 #
 # Go
 #
-# CONFIG_PACKAGE_golang is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_golang is not set'
 #
 # Configuration
 #
 CONFIG_GOLANG_EXTERNAL_BOOTSTRAP_ROOT=""
 CONFIG_GOLANG_BUILD_CACHE_DIR=""
 # CONFIG_GOLANG_MOD_CACHE_WORLD_READABLE is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_golang-doc is not set
 # CONFIG_PACKAGE_golang-github-jedisct1-dnscrypt-proxy2-dev is not set
 # CONFIG_PACKAGE_golang-github-nextdns-nextdns-dev is not set
 # CONFIG_PACKAGE_golang-gitlab-yawning-obfs4-dev is not set
 # CONFIG_PACKAGE_golang-src is not set
-# end of Go
-
+        list bt_tracker '# end of Go'
 #
 # Lua
 #
@@ -3185,13 +3113,11 @@ CONFIG_HAS_LUAJIT_ARCH=y
 # CONFIG_PACKAGE_lyaml is not set
 # CONFIG_PACKAGE_lzmq is not set
 # CONFIG_PACKAGE_uuid is not set
-# end of Lua
-
+        list bt_tracker '# end of Lua'
 #
 # Node.js
 #
-# CONFIG_PACKAGE_node is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_node is not set'
 #
 # Configuration
 #
@@ -3201,8 +3127,7 @@ CONFIG_NODEJS_18=y
 # CONFIG_NODEJS_NPM_KEEP_CACHE is not set
 CONFIG_NODEJS_NPM_CACHE_DIR=""
 # CONFIG_NODEJS_HOST_BIN is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_node-actions-on-google is not set
 # CONFIG_PACKAGE_node-alexa-app is not set
 # CONFIG_PACKAGE_node-arduino-firmata is not set
@@ -3333,27 +3258,23 @@ CONFIG_NODEJS_NPM_CACHE_DIR=""
 # CONFIG_PACKAGE_node-zigbee2mqtt is not set
 # CONFIG_PACKAGE_node-zwave-js-ui is not set
 # CONFIG_PACKAGE_ts-node is not set
-# end of Node.js
-
+        list bt_tracker '# end of Node.js'
 #
 # PHP8
 #
 # CONFIG_PACKAGE_php8 is not set
-# end of PHP8
-
+        list bt_tracker '# end of PHP8'
 #
 # Perl
 #
-CONFIG_PACKAGE_perl=y
-
+        list bt_tracker 'CONFIG_PACKAGE_perl=y'
 #
 # Configuration
 #
 CONFIG_PERL_THREADS=y
 # CONFIG_PERL_TESTS is not set
 CONFIG_PERL_NOCOMMENT=y
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_perl-ack is not set
 # CONFIG_PACKAGE_perl-authen-sasl is not set
 # CONFIG_PACKAGE_perl-authen-sasl-xs is not set
@@ -3510,8 +3431,7 @@ CONFIG_PACKAGE_perlbase-unicore=y
 CONFIG_PACKAGE_perlbase-utf8=y
 # CONFIG_PACKAGE_perlbase-version is not set
 CONFIG_PACKAGE_perlbase-xsloader=y
-# end of Perl
-
+        list bt_tracker '# end of Perl'
 #
 # Python
 #
@@ -3633,14 +3553,12 @@ CONFIG_PACKAGE_perlbase-xsloader=y
 # CONFIG_PACKAGE_python3-jsonschema-specifications is not set
 # CONFIG_PACKAGE_python3-lib2to3 is not set
 # CONFIG_PACKAGE_python3-libmodbus is not set
-# CONFIG_PACKAGE_python3-light is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_python3-light is not set'
 #
 # Configuration
 #
 # CONFIG_PYTHON3_HOST_PIP_CACHE_WORLD_READABLE is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_python3-logging is not set
 # CONFIG_PACKAGE_python3-lru-dict is not set
 # CONFIG_PACKAGE_python3-lxml is not set
@@ -3658,14 +3576,12 @@ CONFIG_PACKAGE_perlbase-xsloader=y
 # CONFIG_PACKAGE_python3-netifaces is not set
 # CONFIG_PACKAGE_python3-networkx is not set
 # CONFIG_PACKAGE_python3-newt is not set
-# CONFIG_PACKAGE_python3-numpy is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_python3-numpy is not set'
 #
 # Configuration
 #
 # CONFIG_NUMPY_OPENBLAS_SUPPORT is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_python3-openpyxl is not set
 # CONFIG_PACKAGE_python3-openssl is not set
 # CONFIG_PACKAGE_python3-orjson is not set
@@ -3764,33 +3680,28 @@ CONFIG_PACKAGE_perlbase-xsloader=y
 # CONFIG_PACKAGE_python3-zeroconf is not set
 # CONFIG_PACKAGE_python3-zipp is not set
 # CONFIG_PACKAGE_python3-zope-interface is not set
-# end of Python
-
+        list bt_tracker '# end of Python'
 #
 # Ruby
 #
 # CONFIG_PACKAGE_ruby is not set
-# end of Ruby
-
+        list bt_tracker '# end of Ruby'
 #
 # Rust
 #
-# CONFIG_PACKAGE_rust is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_rust is not set'
 #
 # Configuration options (for developers)
 #
 # CONFIG_RUST_SCCACHE is not set
 CONFIG_RUST_SCCACHE_DIR=""
 # end of Configuration options (for developers)
-# end of Rust
-
+        list bt_tracker '# end of Rust'
 #
 # Tcl
 #
 # CONFIG_PACKAGE_tcl is not set
-# end of Tcl
-
+        list bt_tracker '# end of Tcl'
 #
 # ucode
 #
@@ -3806,17 +3717,14 @@ CONFIG_PACKAGE_ucode-mod-rtnl=y
 CONFIG_PACKAGE_ucode-mod-ubus=y
 CONFIG_PACKAGE_ucode-mod-uci=y
 CONFIG_PACKAGE_ucode-mod-uloop=y
-# end of ucode
-
+        list bt_tracker '# end of ucode'
 # CONFIG_PACKAGE_chicken-scheme-full is not set
 # CONFIG_PACKAGE_chicken-scheme-interpreter is not set
 # CONFIG_PACKAGE_slsh is not set
-# end of Languages
-
+        list bt_tracker '# end of Languages'
 #
 # Libraries
-#
-
+        list bt_tracker '#'
 #
 # Compression
 #
@@ -3830,8 +3738,7 @@ CONFIG_PACKAGE_liblzma=y
 # CONFIG_PACKAGE_libzip-openssl is not set
 CONFIG_PACKAGE_libzstd=y
 CONFIG_ZSTD_OPTIMIZE_O3=y
-# end of Compression
-
+        list bt_tracker '# end of Compression'
 #
 # Database
 #
@@ -3850,8 +3757,7 @@ CONFIG_ZSTD_OPTIMIZE_O3=y
 # CONFIG_PACKAGE_redis-utils is not set
 # CONFIG_PACKAGE_tdb is not set
 # CONFIG_PACKAGE_unixodbc is not set
-# end of Database
-
+        list bt_tracker '# end of Database'
 #
 # Filesystem
 #
@@ -3862,8 +3768,7 @@ CONFIG_PACKAGE_libfuse=y
 # CONFIG_PACKAGE_libow is not set
 # CONFIG_PACKAGE_libow-capi is not set
 CONFIG_PACKAGE_libsysfs=y
-# end of Filesystem
-
+        list bt_tracker '# end of Filesystem'
 #
 # Firewall
 #
@@ -3875,8 +3780,7 @@ CONFIG_PACKAGE_libiptext-nft=y
 CONFIG_PACKAGE_libiptext6=y
 CONFIG_PACKAGE_libxtables=y
 # CONFIG_IPTABLES_CONNLABEL is not set
-# end of Firewall
-
+        list bt_tracker '# end of Firewall'
 #
 # IoT
 #
@@ -4295,14 +4199,12 @@ CONFIG_PACKAGE_libxtables=y
 # CONFIG_PACKAGE_libupm-zfm20-python3 is not set
 # CONFIG_PACKAGE_sx1302_hal-tests is not set
 # CONFIG_PACKAGE_sx1302_hal-utils is not set
-# end of IoT
-
+        list bt_tracker '# end of IoT'
 #
 # Languages
 #
 # CONFIG_PACKAGE_libyaml is not set
-# end of Languages
-
+        list bt_tracker '# end of Languages'
 #
 # LibElektra
 #
@@ -4323,8 +4225,7 @@ CONFIG_PACKAGE_libxtables=y
 # CONFIG_PACKAGE_libelektra-yajl is not set
 # CONFIG_PACKAGE_libelektra-yamlcpp is not set
 # CONFIG_PACKAGE_libelektra-zmq is not set
-# end of LibElektra
-
+        list bt_tracker '# end of LibElektra'
 #
 # Networking
 #
@@ -4343,15 +4244,13 @@ CONFIG_PACKAGE_libxtables=y
 # CONFIG_PACKAGE_libuwsc-nossl is not set
 # CONFIG_PACKAGE_libuwsc-openssl is not set
 # CONFIG_PACKAGE_libuwsc-wolfssl is not set
-# end of Networking
-
+        list bt_tracker '# end of Networking'
 #
 # Printing
 #
 # CONFIG_PACKAGE_libcups is not set
 # CONFIG_PACKAGE_libcupsimage is not set
-# end of Printing
-
+        list bt_tracker '# end of Printing'
 #
 # Qt6
 #
@@ -4373,13 +4272,11 @@ CONFIG_PACKAGE_libxtables=y
 # CONFIG_PACKAGE_qt6-plugin-libqsqlite is not set
 # CONFIG_PACKAGE_qt6-plugin-libqtuiotouchplugin is not set
 # CONFIG_PACKAGE_qt6-plugin-libqxdgdesktopportal is not set
-# end of Qt6
-
+        list bt_tracker '# end of Qt6'
 #
 # SSL
 #
-CONFIG_PACKAGE_libgnutls=y
-
+        list bt_tracker 'CONFIG_PACKAGE_libgnutls=y'
 #
 # Configuration
 #
@@ -4394,15 +4291,12 @@ CONFIG_GNUTLS_ANON=y
 # CONFIG_GNUTLS_TPM is not set
 # CONFIG_GNUTLS_PKCS11 is not set
 # CONFIG_GNUTLS_EXT_LIBTASN1 is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_libgnutls-dane is not set
-CONFIG_PACKAGE_libmbedtls=y
-
+        list bt_tracker 'CONFIG_PACKAGE_libmbedtls=y'
 #
 # Option details in source code: include/mbedtls/mbedtls_config.h
-#
-
+        list bt_tracker '#'
 #
 # Ciphers - unselect old or less-used ciphers to reduce binary size
 #
@@ -4425,8 +4319,7 @@ CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED=y
 CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED=y
 CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED=y
 # CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_ECDSA_ENABLED is not set
-# CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_RSA_ENABLED is not set
-
+        list bt_tracker '# CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_RSA_ENABLED is not set'
 #
 # Curves - unselect old or less-used curves to reduce binary size
 #
@@ -4442,8 +4335,7 @@ CONFIG_MBEDTLS_ECP_DP_SECP256K1_ENABLED=y
 # CONFIG_MBEDTLS_ECP_DP_BP384R1_ENABLED is not set
 # CONFIG_MBEDTLS_ECP_DP_BP512R1_ENABLED is not set
 CONFIG_MBEDTLS_ECP_DP_CURVE25519_ENABLED=y
-# CONFIG_MBEDTLS_ECP_DP_CURVE448_ENABLED is not set
-
+        list bt_tracker '# CONFIG_MBEDTLS_ECP_DP_CURVE448_ENABLED is not set'
 #
 # Build Options - unselect features to reduce binary size
 #
@@ -4457,16 +4349,14 @@ CONFIG_MBEDTLS_ARMV8CE_AES_C=y
 # CONFIG_MBEDTLS_SELF_TEST is not set
 # CONFIG_MBEDTLS_SSL_TRUNCATED_HMAC is not set
 # CONFIG_MBEDTLS_VERSION_C is not set
-# CONFIG_MBEDTLS_VERSION_FEATURES is not set
-
+        list bt_tracker '# CONFIG_MBEDTLS_VERSION_FEATURES is not set'
 #
 # Build Options
 #
 CONFIG_MBEDTLS_ENTROPY_FORCE_SHA256=y
 # CONFIG_MBEDTLS_SSL_RENEGOTIATION is not set
 # CONFIG_PACKAGE_libnss is not set
-CONFIG_PACKAGE_libopenssl=y
-
+        list bt_tracker 'CONFIG_PACKAGE_libopenssl=y'
 #
 # Build Options
 #
@@ -4475,8 +4365,7 @@ CONFIG_PACKAGE_libopenssl=y
 CONFIG_OPENSSL_WITH_ASM=y
 CONFIG_OPENSSL_WITH_DEPRECATED=y
 # CONFIG_OPENSSL_NO_DEPRECATED is not set
-CONFIG_OPENSSL_WITH_ERROR_MESSAGES=y
-
+        list bt_tracker 'CONFIG_OPENSSL_WITH_ERROR_MESSAGES=y'
 #
 # Protocol Support
 #
@@ -4484,16 +4373,14 @@ CONFIG_OPENSSL_WITH_TLS13=y
 # CONFIG_OPENSSL_WITH_DTLS is not set
 # CONFIG_OPENSSL_WITH_NPN is not set
 CONFIG_OPENSSL_WITH_SRP=y
-CONFIG_OPENSSL_WITH_CMS=y
-
+        list bt_tracker 'CONFIG_OPENSSL_WITH_CMS=y'
 #
 # Algorithm Selection
 #
 # CONFIG_OPENSSL_WITH_EC2M is not set
 CONFIG_OPENSSL_WITH_CHACHA_POLY1305=y
 # CONFIG_OPENSSL_PREFER_CHACHA_OVER_GCM is not set
-CONFIG_OPENSSL_WITH_PSK=y
-
+        list bt_tracker 'CONFIG_OPENSSL_WITH_PSK=y'
 #
 # Less commonly used build options
 #
@@ -4506,8 +4393,7 @@ CONFIG_OPENSSL_WITH_SEED=y
 CONFIG_OPENSSL_WITH_MDC2=y
 CONFIG_OPENSSL_WITH_WHIRLPOOL=y
 # CONFIG_OPENSSL_WITH_COMPRESSION is not set
-# CONFIG_OPENSSL_WITH_RFC3779 is not set
-
+        list bt_tracker '# CONFIG_OPENSSL_WITH_RFC3779 is not set'
 #
 # Engine/Hardware Support
 #
@@ -4519,8 +4405,7 @@ CONFIG_PACKAGE_libopenssl-conf=y
 CONFIG_PACKAGE_libopenssl-devcrypto=y
 # CONFIG_PACKAGE_libopenssl-gost_engine is not set
 # CONFIG_PACKAGE_libopenssl-legacy is not set
-# CONFIG_PACKAGE_libwolfssl is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_libwolfssl is not set'
 #
 # wolfSSL Library Configuration
 #
@@ -4539,18 +4424,15 @@ CONFIG_WOLFSSL_HAS_ECC25519=y
 # CONFIG_WOLFSSL_HAS_ECC448 is not set
 CONFIG_WOLFSSL_HAS_OPENVPN=y
 CONFIG_WOLFSSL_ALT_NAMES=y
-# end of wolfSSL Library Configuration
-
+        list bt_tracker '# end of wolfSSL Library Configuration'
 # CONFIG_PACKAGE_libwolfsslcpu-crypto is not set
-# end of SSL
-
+        list bt_tracker '# end of SSL'
 #
 # Sound
 #
 # CONFIG_PACKAGE_alsa-ucm-conf is not set
 # CONFIG_PACKAGE_liblo is not set
-# end of Sound
-
+        list bt_tracker '# end of Sound'
 #
 # Telephony
 #
@@ -4578,8 +4460,7 @@ CONFIG_WOLFSSL_ALT_NAMES=y
 # CONFIG_PACKAGE_libsrtp2 is not set
 # CONFIG_PACKAGE_signalwire-client-c is not set
 # CONFIG_PACKAGE_sofia-sip is not set
-# end of Telephony
-
+        list bt_tracker '# end of Telephony'
 #
 # libimobiledevice
 #
@@ -4587,8 +4468,7 @@ CONFIG_WOLFSSL_ALT_NAMES=y
 # CONFIG_PACKAGE_libirecovery is not set
 # CONFIG_PACKAGE_libplist is not set
 # CONFIG_PACKAGE_libusbmuxd is not set
-# end of libimobiledevice
-
+        list bt_tracker '# end of libimobiledevice'
 # CONFIG_PACKAGE_acsccid is not set
 # CONFIG_PACKAGE_alsa-lib is not set
 # CONFIG_PACKAGE_antileech is not set
@@ -4661,8 +4541,7 @@ CONFIG_PACKAGE_libcomerr=y
 # CONFIG_PACKAGE_libcron is not set
 # CONFIG_PACKAGE_libcryptopp is not set
 # CONFIG_PACKAGE_libctf is not set
-CONFIG_PACKAGE_libcurl=y
-
+        list bt_tracker 'CONFIG_PACKAGE_libcurl=y'
 #
 # SSL support
 #
@@ -4670,8 +4549,7 @@ CONFIG_PACKAGE_libcurl=y
 # CONFIG_LIBCURL_WOLFSSL is not set
 CONFIG_LIBCURL_OPENSSL=y
 # CONFIG_LIBCURL_GNUTLS is not set
-# CONFIG_LIBCURL_NOSSL is not set
-
+        list bt_tracker '# CONFIG_LIBCURL_NOSSL is not set'
 #
 # Supported protocols
 #
@@ -4692,8 +4570,7 @@ CONFIG_LIBCURL_COOKIES=y
 CONFIG_LIBCURL_TFTP=y
 CONFIG_LIBCURL_NGHTTP2=y
 # CONFIG_LIBCURL_NGHTTP3 is not set
-# CONFIG_LIBCURL_NGTCP2 is not set
-
+        list bt_tracker '# CONFIG_LIBCURL_NGTCP2 is not set'
 #
 # Miscellaneous
 #
@@ -4848,14 +4725,12 @@ CONFIG_PACKAGE_libnetfilter-conntrack=y
 # CONFIG_PACKAGE_libnetfilter-log is not set
 # CONFIG_PACKAGE_libnetfilter-queue is not set
 # CONFIG_PACKAGE_libnetsnmp is not set
-CONFIG_PACKAGE_libnettle=y
-
+        list bt_tracker 'CONFIG_PACKAGE_libnettle=y'
 #
 # Configuration
 #
 # CONFIG_LIBNETTLE_MINI is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_libnewt is not set
 CONFIG_PACKAGE_libnfnetlink=y
 CONFIG_PACKAGE_libnftnl=y
@@ -4895,15 +4770,13 @@ CONFIG_PACKAGE_libnl-tiny=y
 # CONFIG_PACKAGE_libpam is not set
 CONFIG_PACKAGE_libparted=y
 # CONFIG_PACKAGE_libpbc is not set
-CONFIG_PACKAGE_libpcap=y
-
+        list bt_tracker 'CONFIG_PACKAGE_libpcap=y'
 #
 # Configuration
 #
 # CONFIG_PCAP_HAS_USB is not set
 # CONFIG_PCAP_HAS_NETFILTER is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_libpci is not set
 # CONFIG_PACKAGE_libpciaccess is not set
 CONFIG_PACKAGE_libpcre=y
@@ -4923,8 +4796,7 @@ CONFIG_PACKAGE_libpopt=y
 # CONFIG_PACKAGE_libpri is not set
 # CONFIG_PACKAGE_libprotobuf-c is not set
 CONFIG_PACKAGE_libpsl=y
-CONFIG_PACKAGE_libqmi=y
-
+        list bt_tracker 'CONFIG_PACKAGE_libqmi=y'
 #
 # Configuration
 #
@@ -4933,8 +4805,7 @@ CONFIG_LIBQMI_WITH_QRTR_GLIB=y
 # CONFIG_LIBQMI_COLLECTION_MINIMAL is not set
 CONFIG_LIBQMI_COLLECTION_BASIC=y
 # CONFIG_LIBQMI_COLLECTION_FULL is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_libqrencode is not set
 CONFIG_PACKAGE_libqrtr-glib=y
 # CONFIG_PACKAGE_libquickjs is not set
@@ -5086,21 +4957,17 @@ CONFIG_PACKAGE_terminfo=y
 # CONFIG_PACKAGE_xmlrpc-c-server-abyss is not set
 # CONFIG_PACKAGE_yajl is not set
 # CONFIG_PACKAGE_yubico-pam is not set
-CONFIG_PACKAGE_zlib=y
-
+        list bt_tracker 'CONFIG_PACKAGE_zlib=y'
 #
 # Configuration
 #
 # CONFIG_ZLIB_OPTIMIZE_SPEED is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_zlog is not set
-# end of Libraries
-
+        list bt_tracker '# end of Libraries'
 #
 # LuCI
-#
-
+        list bt_tracker '#'
 #
 # 1. Collections
 #
@@ -5111,16 +4978,14 @@ CONFIG_PACKAGE_luci-light=y
 # CONFIG_PACKAGE_luci-ssl is not set
 # CONFIG_PACKAGE_luci-ssl-nginx is not set
 # CONFIG_PACKAGE_luci-ssl-openssl is not set
-# end of 1. Collections
-
+        list bt_tracker '# end of 1. Collections'
 #
 # 2. Modules
 #
 CONFIG_PACKAGE_luci-base=y
 # CONFIG_LUCI_SRCDIET is not set
 CONFIG_LUCI_JSMIN=y
-# CONFIG_LUCI_CSSTIDY is not set
-
+        list bt_tracker '# CONFIG_LUCI_CSSTIDY is not set'
 #
 # Translations
 #
@@ -5158,8 +5023,7 @@ CONFIG_LUCI_JSMIN=y
 # CONFIG_LUCI_LANG_vi is not set
 CONFIG_LUCI_LANG_zh_Hans=y
 # CONFIG_LUCI_LANG_zh_Hant is not set
-# end of Translations
-
+        list bt_tracker '# end of Translations'
 CONFIG_PACKAGE_luci-compat=y
 CONFIG_PACKAGE_luci-lua-runtime=y
 CONFIG_PACKAGE_luci-mod-admin-full=y
@@ -5170,8 +5034,7 @@ CONFIG_PACKAGE_luci-mod-network=y
 # CONFIG_PACKAGE_luci-mod-rpc is not set
 CONFIG_PACKAGE_luci-mod-status=y
 CONFIG_PACKAGE_luci-mod-system=y
-# end of 2. Modules
-
+        list bt_tracker '# end of 2. Modules'
 #
 # 3. Applications
 #
@@ -5294,8 +5157,7 @@ CONFIG_PACKAGE_luci-app-opkg=y
 # CONFIG_PACKAGE_luci-app-oscam is not set
 # CONFIG_PACKAGE_luci-app-p910nd is not set
 # CONFIG_PACKAGE_luci-app-pagekitec is not set
-CONFIG_PACKAGE_luci-app-passwall=y
-
+        list bt_tracker 'CONFIG_PACKAGE_luci-app-passwall=y'
 #
 # Configuration
 #
@@ -5319,8 +5181,7 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_IPT2Socks=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_luci-app-pbr is not set
 # CONFIG_PACKAGE_luci-app-polipo is not set
 # CONFIG_PACKAGE_luci-app-pppoe-relay is not set
@@ -5391,8 +5252,7 @@ CONFIG_PACKAGE_luci-app-wol=y
 # CONFIG_PACKAGE_luci-app-xinetd is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
 # CONFIG_PACKAGE_luci-app-zerotier is not set
-# end of 3. Applications
-
+        list bt_tracker '# end of 3. Applications'
 #
 # 4. Themes
 #
@@ -5402,8 +5262,7 @@ CONFIG_PACKAGE_luci-theme-bootstrap=y
 CONFIG_PACKAGE_luci-theme-material=y
 # CONFIG_PACKAGE_luci-theme-openwrt is not set
 # CONFIG_PACKAGE_luci-theme-openwrt-2020 is not set
-# end of 4. Themes
-
+        list bt_tracker '# end of 4. Themes'
 #
 # 5. Protocols
 #
@@ -5433,8 +5292,7 @@ CONFIG_PACKAGE_luci-proto-relay=y
 # CONFIG_PACKAGE_luci-proto-vxlan is not set
 # CONFIG_PACKAGE_luci-proto-wireguard is not set
 # CONFIG_PACKAGE_luci-proto-yggdrasil is not set
-# end of 5. Protocols
-
+        list bt_tracker '# end of 5. Protocols'
 #
 # 6. Libraries
 #
@@ -5452,8 +5310,7 @@ CONFIG_PACKAGE_luci-lib-nixio=y
 # CONFIG_PACKAGE_luci-lib-nixio_cyassl is not set
 CONFIG_PACKAGE_luci-lib-nixio_openssl=y
 # CONFIG_PACKAGE_luci-lib-px5g is not set
-# end of 6. Libraries
-
+        list bt_tracker '# end of 6. Libraries'
 CONFIG_PACKAGE_default-settings=y
 CONFIG_PACKAGE_default-settings-chn=y
 CONFIG_PACKAGE_luci-i18n-amlogic-zh-cn=y
@@ -5899,8 +5756,7 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-upnp-zh-tw is not set
 # CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn is not set
-# end of LuCI
-
+        list bt_tracker '# end of LuCI'
 #
 # Mail
 #
@@ -5931,18 +5787,15 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_spamassassin is not set
 # CONFIG_PACKAGE_spamc is not set
 # CONFIG_PACKAGE_spamc-ssl is not set
-# end of Mail
-
+        list bt_tracker '# end of Mail'
 #
 # Multimedia
-#
-
+        list bt_tracker '#'
 #
 # Streaming
 #
 # CONFIG_PACKAGE_oggfwd is not set
-# end of Streaming
-
+        list bt_tracker '# end of Streaming'
 # CONFIG_PACKAGE_ffmpeg is not set
 # CONFIG_PACKAGE_ffprobe is not set
 # CONFIG_PACKAGE_fswebcam is not set
@@ -5976,12 +5829,10 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_ykdl is not set
 # CONFIG_PACKAGE_you-get is not set
 # CONFIG_PACKAGE_yt-dlp is not set
-# end of Multimedia
-
+        list bt_tracker '# end of Multimedia'
 #
 # Network
-#
-
+        list bt_tracker '#'
 #
 # BitTorrent
 #
@@ -5996,8 +5847,7 @@ CONFIG_PACKAGE_transmission-daemon=y
 CONFIG_PACKAGE_transmission-remote=y
 # CONFIG_PACKAGE_transmission-web is not set
 CONFIG_PACKAGE_transmission-web-control=y
-# end of BitTorrent
-
+        list bt_tracker '# end of BitTorrent'
 #
 # Campus Network
 #
@@ -6007,8 +5857,7 @@ CONFIG_PACKAGE_transmission-web-control=y
 # CONFIG_PACKAGE_njit8021xclient is not set
 # CONFIG_PACKAGE_scutclient is not set
 # CONFIG_PACKAGE_sysuh3c is not set
-# end of Campus Network
-
+        list bt_tracker '# end of Campus Network'
 #
 # Captive Portals
 #
@@ -6019,24 +5868,21 @@ CONFIG_PACKAGE_transmission-web-control=y
 # CONFIG_PACKAGE_opennds is not set
 # CONFIG_PACKAGE_wifidog is not set
 # CONFIG_PACKAGE_wifidog-tls is not set
-# end of Captive Portals
-
+        list bt_tracker '# end of Captive Portals'
 #
 # Cloud Manager
 #
 # CONFIG_PACKAGE_cloudreve is not set
 # CONFIG_PACKAGE_rclone-ng is not set
 # CONFIG_PACKAGE_rclone-webui-react is not set
-# end of Cloud Manager
-
+        list bt_tracker '# end of Cloud Manager'
 #
 # Dial-in/up
 #
 # CONFIG_PACKAGE_rp-pppoe-common is not set
 # CONFIG_PACKAGE_rp-pppoe-relay is not set
 # CONFIG_PACKAGE_rp-pppoe-server is not set
-# end of Dial-in/up
-
+        list bt_tracker '# end of Dial-in/up'
 #
 # Download Manager
 #
@@ -6045,8 +5891,7 @@ CONFIG_PACKAGE_transmission-web-control=y
 # CONFIG_PACKAGE_leech is not set
 # CONFIG_PACKAGE_pandownload-fake-server is not set
 # CONFIG_PACKAGE_webui-aria2 is not set
-# end of Download Manager
-
+        list bt_tracker '# end of Download Manager'
 #
 # File Transfer
 #
@@ -6068,8 +5913,7 @@ CONFIG_PACKAGE_curl=y
 # CONFIG_PACKAGE_webdav-go is not set
 # CONFIG_PACKAGE_wget-nossl is not set
 CONFIG_PACKAGE_wget-ssl=y
-# end of File Transfer
-
+        list bt_tracker '# end of File Transfer'
 #
 # Filesystem
 #
@@ -6082,8 +5926,7 @@ CONFIG_PACKAGE_ksmbd-server=y
 # CONFIG_PACKAGE_owhttpd is not set
 # CONFIG_PACKAGE_owserver is not set
 # CONFIG_PACKAGE_sshfs is not set
-# end of Filesystem
-
+        list bt_tracker '# end of Filesystem'
 #
 # Firewall
 #
@@ -6148,22 +5991,18 @@ CONFIG_PACKAGE_iptables-nft=y
 # CONFIG_PACKAGE_iptables-mod-trace is not set
 # CONFIG_PACKAGE_iptables-mod-u32 is not set
 # CONFIG_PACKAGE_iptaccount is not set
-# CONFIG_PACKAGE_iptasn is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_iptasn is not set'
 #
 # Select iptasn options
 #
 # CONFIG_IPTASN_PRESERVE is not set
-# end of Select iptasn options
-
-# CONFIG_PACKAGE_iptgeoip is not set
-
+        list bt_tracker '# end of Select iptasn options'
+        list bt_tracker '# CONFIG_PACKAGE_iptgeoip is not set'
 #
 # Select iptgeoip options
 #
 # CONFIG_IPTGEOIP_PRESERVE is not set
-# end of Select iptgeoip options
-
+        list bt_tracker '# end of Select iptgeoip options'
 # CONFIG_PACKAGE_miniupnpc is not set
 # CONFIG_PACKAGE_miniupnpd-iptables is not set
 CONFIG_PACKAGE_miniupnpd-nftables=y
@@ -6180,23 +6019,20 @@ CONFIG_PACKAGE_nftables-json=y
 # CONFIG_PACKAGE_snort3 is not set
 # CONFIG_PACKAGE_xtables-legacy is not set
 CONFIG_PACKAGE_xtables-nft=y
-# end of Firewall
-
+        list bt_tracker '# end of Firewall'
 #
 # Firewall Tunnel
 #
 # CONFIG_PACKAGE_iodine is not set
 # CONFIG_PACKAGE_iodined is not set
-# end of Firewall Tunnel
-
+        list bt_tracker '# end of Firewall Tunnel'
 #
 # FreeRADIUS (version 3)
 #
 # CONFIG_PACKAGE_freeradius3 is not set
 # CONFIG_PACKAGE_freeradius3-common is not set
 # CONFIG_PACKAGE_freeradius3-utils is not set
-# end of FreeRADIUS (version 3)
-
+        list bt_tracker '# end of FreeRADIUS (version 3)'
 #
 # IP Addresses and Names
 #
@@ -6284,14 +6120,12 @@ CONFIG_PACKAGE_ddns-scripts_aliyun=y
 # CONFIG_PACKAGE_knot-host is not set
 # CONFIG_PACKAGE_knot-keymgr is not set
 # CONFIG_PACKAGE_knot-nsupdate is not set
-# CONFIG_PACKAGE_knot-resolver is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_knot-resolver is not set'
 #
 # Configuration
 #
 # CONFIG_PACKAGE_knot-resolver_dnstap is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_knot-tests is not set
 # CONFIG_PACKAGE_knot-zonecheck is not set
 # CONFIG_PACKAGE_ldns-examples is not set
@@ -6329,8 +6163,7 @@ CONFIG_PCAP_DNSPROXY_LISTENPORT=1053
 # CONFIG_PACKAGE_v2ray-geosite-ir is not set
 CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_zonestitcher is not set
-# end of IP Addresses and Names
-
+        list bt_tracker '# end of IP Addresses and Names'
 #
 # Instant Messaging
 #
@@ -6342,8 +6175,7 @@ CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_umurmur-mbedtls is not set
 # CONFIG_PACKAGE_umurmur-openssl is not set
 # CONFIG_PACKAGE_znc is not set
-# end of Instant Messaging
-
+        list bt_tracker '# end of Instant Messaging'
 #
 # Linux ATM tools
 #
@@ -6373,16 +6205,14 @@ CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_atm-ttcp_atm is not set
 # CONFIG_PACKAGE_atm-zeppelin is not set
 # CONFIG_PACKAGE_br2684ctl is not set
-# end of Linux ATM tools
-
+        list bt_tracker '# end of Linux ATM tools'
 #
 # LoRaWAN
 #
 # CONFIG_PACKAGE_basicstation is not set
 # CONFIG_PACKAGE_libloragw-tests is not set
 # CONFIG_PACKAGE_libloragw-utils is not set
-# end of LoRaWAN
-
+        list bt_tracker '# end of LoRaWAN'
 #
 # NMAP Suite
 #
@@ -6395,16 +6225,14 @@ CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_nmap-ssl is not set
 # CONFIG_PACKAGE_nping is not set
 # CONFIG_PACKAGE_nping-ssl is not set
-# end of NMAP Suite
-
+        list bt_tracker '# end of NMAP Suite'
 #
 # NTRIP
 #
 # CONFIG_PACKAGE_ntripcaster is not set
 # CONFIG_PACKAGE_ntripclient is not set
 # CONFIG_PACKAGE_ntripserver is not set
-# end of NTRIP
-
+        list bt_tracker '# end of NTRIP'
 #
 # OLSR.org network framework
 #
@@ -6412,8 +6240,7 @@ CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_oonf-dlep-radio is not set
 # CONFIG_PACKAGE_oonf-init-scripts is not set
 # CONFIG_PACKAGE_oonf-olsrd2 is not set
-# end of OLSR.org network framework
-
+        list bt_tracker '# end of OLSR.org network framework'
 #
 # Open vSwitch
 #
@@ -6422,22 +6249,19 @@ CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_openvswitch-ovn-north is not set
 # CONFIG_PACKAGE_openvswitch-python3 is not set
 # CONFIG_PACKAGE_ovsd is not set
-# end of Open vSwitch
-
+        list bt_tracker '# end of Open vSwitch'
 #
 # OpenLDAP
 #
 # CONFIG_PACKAGE_libopenldap is not set
 # CONFIG_PACKAGE_openldap-server is not set
 # CONFIG_PACKAGE_openldap-utils is not set
-# end of OpenLDAP
-
+        list bt_tracker '# end of OpenLDAP'
 #
 # P2P
 #
 # CONFIG_PACKAGE_amule is not set
-# end of P2P
-
+        list bt_tracker '# end of P2P'
 #
 # Printing
 #
@@ -6447,8 +6271,7 @@ CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_cups-filters is not set
 # CONFIG_PACKAGE_cups-ppdc is not set
 # CONFIG_PACKAGE_p910nd is not set
-# end of Printing
-
+        list bt_tracker '# end of Printing'
 #
 # Routing and Redirection
 #
@@ -6495,8 +6318,7 @@ CONFIG_PACKAGE_relayd=y
 # CONFIG_PACKAGE_udp-broadcast-relay-redux is not set
 # CONFIG_PACKAGE_vis is not set
 # CONFIG_PACKAGE_yggdrasil is not set
-# end of Routing and Redirection
-
+        list bt_tracker '# end of Routing and Redirection'
 #
 # SSH
 #
@@ -6512,8 +6334,7 @@ CONFIG_PACKAGE_relayd=y
 # CONFIG_PACKAGE_openssh-sftp-server is not set
 # CONFIG_PACKAGE_sshtunnel is not set
 # CONFIG_PACKAGE_tmate is not set
-# end of SSH
-
+        list bt_tracker '# end of SSH'
 #
 # THC-IPv6 attack and analyzing toolkit
 #
@@ -6572,8 +6393,7 @@ CONFIG_PACKAGE_relayd=y
 # CONFIG_PACKAGE_thc-ipv6-toobig6 is not set
 # CONFIG_PACKAGE_thc-ipv6-toobigsniff6 is not set
 # CONFIG_PACKAGE_thc-ipv6-trace6 is not set
-# end of THC-IPv6 attack and analyzing toolkit
-
+        list bt_tracker '# end of THC-IPv6 attack and analyzing toolkit'
 #
 # Tcpreplay
 #
@@ -6585,8 +6405,7 @@ CONFIG_PACKAGE_relayd=y
 # CONFIG_PACKAGE_tcpreplay-all is not set
 # CONFIG_PACKAGE_tcpreplay-edit is not set
 # CONFIG_PACKAGE_tcprewrite is not set
-# end of Tcpreplay
-
+        list bt_tracker '# end of Tcpreplay'
 #
 # Telephony
 #
@@ -6604,13 +6423,11 @@ CONFIG_PACKAGE_relayd=y
 # CONFIG_PACKAGE_sipp is not set
 # CONFIG_PACKAGE_siproxd is not set
 # CONFIG_PACKAGE_yate is not set
-# end of Telephony
-
+        list bt_tracker '# end of Telephony'
 #
 # Telephony Lantiq
 #
-# end of Telephony Lantiq
-
+        list bt_tracker '# end of Telephony Lantiq'
 #
 # Time Synchronization
 #
@@ -6623,8 +6440,7 @@ CONFIG_PACKAGE_relayd=y
 # CONFIG_PACKAGE_ntpclient is not set
 # CONFIG_PACKAGE_ntpd is not set
 # CONFIG_PACKAGE_ntpdate is not set
-# end of Time Synchronization
-
+        list bt_tracker '# end of Time Synchronization'
 #
 # VPN
 #
@@ -6637,16 +6453,14 @@ CONFIG_PACKAGE_relayd=y
 # CONFIG_PACKAGE_n2n-utils is not set
 # CONFIG_PACKAGE_netbird is not set
 # CONFIG_PACKAGE_ocserv is not set
-CONFIG_PACKAGE_openconnect=y
-
+        list bt_tracker 'CONFIG_PACKAGE_openconnect=y'
 #
 # Configuration
 #
 CONFIG_OPENCONNECT_GNUTLS=y
 # CONFIG_OPENCONNECT_OPENSSL is not set
 # CONFIG_OPENCONNECT_STOKEN is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_openfortivpn is not set
 # CONFIG_PACKAGE_openvpn-easy-rsa is not set
 # CONFIG_PACKAGE_openvpn-mbedtls is not set
@@ -6675,8 +6489,7 @@ CONFIG_PACKAGE_vpnc-scripts=y
 CONFIG_PACKAGE_wireguard-tools=y
 # CONFIG_PACKAGE_xl2tpd is not set
 # CONFIG_PACKAGE_zerotier is not set
-# end of VPN
-
+        list bt_tracker '# end of VPN'
 #
 # Version Control Systems
 #
@@ -6687,8 +6500,7 @@ CONFIG_PACKAGE_git=y
 # CONFIG_PACKAGE_subversion-client is not set
 # CONFIG_PACKAGE_subversion-libs is not set
 # CONFIG_PACKAGE_subversion-server is not set
-# end of Version Control Systems
-
+        list bt_tracker '# end of Version Control Systems'
 #
 # WWAN
 #
@@ -6698,8 +6510,7 @@ CONFIG_PACKAGE_comgt=y
 CONFIG_PACKAGE_comgt-ncm=y
 # CONFIG_PACKAGE_umbim is not set
 CONFIG_PACKAGE_uqmi=y
-# end of WWAN
-
+        list bt_tracker '# end of WWAN'
 #
 # Web Servers/Proxies
 #
@@ -6787,8 +6598,7 @@ CONFIG_PACKAGE_uhttpd-mod-ubus=y
 # CONFIG_PACKAGE_v2raya is not set
 # CONFIG_PACKAGE_xfrpc is not set
 # CONFIG_PACKAGE_xray-plugin is not set
-# end of Web Servers/Proxies
-
+        list bt_tracker '# end of Web Servers/Proxies'
 #
 # Wireless
 #
@@ -6802,8 +6612,7 @@ CONFIG_PACKAGE_uhttpd-mod-ubus=y
 # CONFIG_PACKAGE_reaver is not set
 # CONFIG_PACKAGE_wavemon is not set
 # CONFIG_PACKAGE_wifischedule is not set
-# end of Wireless
-
+        list bt_tracker '# end of Wireless'
 #
 # WirelessAPD
 #
@@ -6855,15 +6664,13 @@ CONFIG_PACKAGE_wpad-basic=y
 # CONFIG_PACKAGE_wpad-mini is not set
 # CONFIG_PACKAGE_wpad-openssl is not set
 # CONFIG_PACKAGE_wpad-wolfssl is not set
-# end of WirelessAPD
-
+        list bt_tracker '# end of WirelessAPD'
 #
 # arp-scan
 #
 # CONFIG_PACKAGE_arp-scan is not set
 # CONFIG_PACKAGE_arp-scan-database is not set
-# end of arp-scan
-
+        list bt_tracker '# end of arp-scan'
 # CONFIG_PACKAGE_464xlat is not set
 CONFIG_PACKAGE_6in4=y
 # CONFIG_PACKAGE_6rd is not set
@@ -7049,14 +6856,12 @@ CONFIG_PACKAGE_nlbwmon=y
 CONFIG_PACKAGE_odhcp6c=y
 CONFIG_PACKAGE_odhcp6c_ext_cer_id=0
 # CONFIG_PACKAGE_odhcpd is not set
-CONFIG_PACKAGE_odhcpd-ipv6only=y
-
+        list bt_tracker 'CONFIG_PACKAGE_odhcpd-ipv6only=y'
 #
 # Configuration
 #
 CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_ola is not set
 # CONFIG_PACKAGE_omcproxy is not set
 # CONFIG_PACKAGE_onionshare-cli is not set
@@ -7198,8 +7003,7 @@ CONFIG_PACKAGE_wwan=y
 # CONFIG_PACKAGE_xinetd is not set
 # CONFIG_PACKAGE_xray-core is not set
 # CONFIG_PACKAGE_ztdns is not set
-# end of Network
-
+        list bt_tracker '# end of Network'
 #
 # Sound
 #
@@ -7240,19 +7044,16 @@ CONFIG_PACKAGE_wwan=y
 # CONFIG_PACKAGE_svox is not set
 # CONFIG_PACKAGE_ttymidi-sysex is not set
 # CONFIG_PACKAGE_upmpdcli is not set
-# end of Sound
-
+        list bt_tracker '# end of Sound'
 #
 # Utilities
-#
-
+        list bt_tracker '#'
 #
 # AppArmor
 #
 # CONFIG_PACKAGE_apparmor-profiles is not set
 # CONFIG_PACKAGE_apparmor-utils is not set
-# end of AppArmor
-
+        list bt_tracker '# end of AppArmor'
 #
 # BigClown
 #
@@ -7260,15 +7061,13 @@ CONFIG_PACKAGE_wwan=y
 # CONFIG_PACKAGE_bigclown-firmware-tool is not set
 # CONFIG_PACKAGE_bigclown-gateway is not set
 # CONFIG_PACKAGE_bigclown-mqtt2influxdb is not set
-# end of BigClown
-
+        list bt_tracker '# end of BigClown'
 #
 # Boot Loaders
 #
 # CONFIG_PACKAGE_fconfig is not set
 # CONFIG_PACKAGE_uboot-envtools is not set
-# end of Boot Loaders
-
+        list bt_tracker '# end of Boot Loaders'
 #
 # Compression
 #
@@ -7295,8 +7094,7 @@ CONFIG_PACKAGE_xz=y
 # CONFIG_PACKAGE_zipmerge is not set
 # CONFIG_PACKAGE_ziptool is not set
 CONFIG_PACKAGE_zstd=y
-# end of Compression
-
+        list bt_tracker '# end of Compression'
 #
 # Database
 #
@@ -7309,8 +7107,7 @@ CONFIG_PACKAGE_zstd=y
 # CONFIG_PACKAGE_rrdtool1 is not set
 # CONFIG_PACKAGE_sqlite3-cli is not set
 # CONFIG_PACKAGE_unixodbc-tools is not set
-# end of Database
-
+        list bt_tracker '# end of Database'
 #
 # Disc
 #
@@ -7335,22 +7132,19 @@ CONFIG_PACKAGE_lsblk=y
 # CONFIG_PACKAGE_mdadm is not set
 # CONFIG_PACKAGE_mtools is not set
 # CONFIG_PACKAGE_nvme-cli is not set
-CONFIG_PACKAGE_parted=y
-
+        list bt_tracker 'CONFIG_PACKAGE_parted=y'
 #
 # Configuration
 #
 CONFIG_PARTED_READLINE=y
 # CONFIG_PARTED_LVM2 is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 CONFIG_PACKAGE_partx-utils=y
 # CONFIG_PACKAGE_sfdisk is not set
 # CONFIG_PACKAGE_sgdisk is not set
 # CONFIG_PACKAGE_uvol is not set
 # CONFIG_PACKAGE_wipefs is not set
-# end of Disc
-
+        list bt_tracker '# end of Disc'
 #
 # Editors
 #
@@ -7368,8 +7162,7 @@ CONFIG_PACKAGE_vim=y
 # CONFIG_PACKAGE_vim-help is not set
 # CONFIG_PACKAGE_vim-runtime is not set
 # CONFIG_PACKAGE_zile is not set
-# end of Editors
-
+        list bt_tracker '# end of Editors'
 #
 # Encryption
 #
@@ -7389,8 +7182,7 @@ CONFIG_PACKAGE_vim=y
 # CONFIG_PACKAGE_px5g-standalone is not set
 # CONFIG_PACKAGE_px5g-wolfssl is not set
 # CONFIG_PACKAGE_stoken is not set
-# end of Encryption
-
+        list bt_tracker '# end of Encryption'
 #
 # Filesystem
 #
@@ -7441,23 +7233,20 @@ CONFIG_PACKAGE_sysfsutils=y
 CONFIG_PACKAGE_xfs-fsck=y
 # CONFIG_PACKAGE_xfs-growfs is not set
 CONFIG_PACKAGE_xfs-mkfs=y
-# end of Filesystem
-
+        list bt_tracker '# end of Filesystem'
 #
 # Image Manipulation
 #
 # CONFIG_PACKAGE_libjpeg-turbo-utils is not set
 # CONFIG_PACKAGE_tiff-utils is not set
-# end of Image Manipulation
-
+        list bt_tracker '# end of Image Manipulation'
 #
 # Microcontroller programming
 #
 # CONFIG_PACKAGE_avrdude is not set
 # CONFIG_PACKAGE_dfu-programmer is not set
 # CONFIG_PACKAGE_stm32flash is not set
-# end of Microcontroller programming
-
+        list bt_tracker '# end of Microcontroller programming'
 #
 # RTKLIB Suite
 #
@@ -7466,13 +7255,11 @@ CONFIG_PACKAGE_xfs-mkfs=y
 # CONFIG_PACKAGE_rnx2rtkp is not set
 # CONFIG_PACKAGE_rtkrcv is not set
 # CONFIG_PACKAGE_str2str is not set
-# end of RTKLIB Suite
-
+        list bt_tracker '# end of RTKLIB Suite'
 #
 # SSL
 #
-# end of SSL
-
+        list bt_tracker '# end of SSL'
 #
 # Shells
 #
@@ -7482,8 +7269,7 @@ CONFIG_PACKAGE_bash=y
 # CONFIG_PACKAGE_mksh is not set
 # CONFIG_PACKAGE_tcsh is not set
 # CONFIG_PACKAGE_zsh is not set
-# end of Shells
-
+        list bt_tracker '# end of Shells'
 #
 # Telephony
 #
@@ -7492,8 +7278,7 @@ CONFIG_PACKAGE_bash=y
 # CONFIG_PACKAGE_gsm-utils is not set
 # CONFIG_PACKAGE_sipgrep is not set
 # CONFIG_PACKAGE_sngrep is not set
-# end of Telephony
-
+        list bt_tracker '# end of Telephony'
 #
 # Terminal
 #
@@ -7514,8 +7299,7 @@ CONFIG_PACKAGE_screen=y
 # CONFIG_PACKAGE_tmux is not set
 CONFIG_PACKAGE_ttyd=y
 # CONFIG_PACKAGE_wall is not set
-# end of Terminal
-
+        list bt_tracker '# end of Terminal'
 #
 # Time Zone info
 #
@@ -7531,13 +7315,11 @@ CONFIG_PACKAGE_zoneinfo-europe=y
 # CONFIG_PACKAGE_zoneinfo-pacific is not set
 # CONFIG_PACKAGE_zoneinfo-poles is not set
 # CONFIG_PACKAGE_zoneinfo-simple is not set
-# end of Time Zone info
-
+        list bt_tracker '# end of Time Zone info'
 #
 # Userspace GPIO Drivers
 #
-# end of Userspace GPIO Drivers
-
+        list bt_tracker '# end of Userspace GPIO Drivers'
 #
 # Virtualization
 #
@@ -7554,8 +7336,7 @@ CONFIG_PACKAGE_zoneinfo-europe=y
 # CONFIG_PACKAGE_qemu-nbd is not set
 # CONFIG_PACKAGE_qemu-x86_64-softmmu is not set
 # CONFIG_PACKAGE_virtio-console-helper is not set
-# end of Virtualization
-
+        list bt_tracker '# end of Virtualization'
 #
 # libimobiledevice
 #
@@ -7565,8 +7346,7 @@ CONFIG_PACKAGE_zoneinfo-europe=y
 # CONFIG_PACKAGE_libusbmuxd-utils is not set
 # CONFIG_PACKAGE_plistutil is not set
 # CONFIG_PACKAGE_usbmuxd is not set
-# end of libimobiledevice
-
+        list bt_tracker '# end of libimobiledevice'
 #
 # libselinux tools
 #
@@ -7598,8 +7378,7 @@ CONFIG_PACKAGE_zoneinfo-europe=y
 # CONFIG_PACKAGE_libselinux-setfilecon is not set
 # CONFIG_PACKAGE_libselinux-togglesebool is not set
 # CONFIG_PACKAGE_libselinux-validatetrans is not set
-# end of libselinux tools
-
+        list bt_tracker '# end of libselinux tools'
 # CONFIG_PACKAGE_ack is not set
 CONFIG_PACKAGE_acpid=y
 # CONFIG_PACKAGE_adb is not set
@@ -7789,24 +7568,21 @@ CONFIG_PACKAGE_docker-compose=y
 CONFIG_PACKAGE_dockerd=y
 # CONFIG_DOCKER_CHECK_CONFIG is not set
 CONFIG_DOCKER_CGROUP_OPTIONS=y
-# CONFIG_DOCKER_OPTIONAL_FEATURES is not set
-
+        list bt_tracker '# CONFIG_DOCKER_OPTIONAL_FEATURES is not set'
 #
 # Network
 #
 # CONFIG_DOCKER_NET_OVERLAY is not set
 CONFIG_DOCKER_NET_MACVLAN=y
 # CONFIG_DOCKER_NET_TFTP is not set
-# end of Network
-
+        list bt_tracker '# end of Network'
 #
 # Storage
 #
 # CONFIG_DOCKER_STO_DEVMAPPER is not set
 CONFIG_DOCKER_STO_EXT4=y
 # CONFIG_DOCKER_STO_BTRFS is not set
-# end of Storage
-
+        list bt_tracker '# end of Storage'
 # CONFIG_PACKAGE_domoticz is not set
 # CONFIG_PACKAGE_dos2unix is not set
 # CONFIG_PACKAGE_dropbearconvert is not set
@@ -7953,14 +7729,12 @@ CONFIG_PACKAGE_openssl-util=y
 # CONFIG_PACKAGE_pciutils is not set
 # CONFIG_PACKAGE_pcsc-tools is not set
 # CONFIG_PACKAGE_pcscd is not set
-# CONFIG_PACKAGE_podman is not set
-
+        list bt_tracker '# CONFIG_PACKAGE_podman is not set'
 #
 # Configuration
 #
 # CONFIG_PODMAN_SELINUX_SUPPORT is not set
-# end of Configuration
-
+        list bt_tracker '# end of Configuration'
 # CONFIG_PACKAGE_poemgr is not set
 # CONFIG_PACKAGE_policycoreutils is not set
 # CONFIG_PACKAGE_powertop is not set
@@ -8113,12 +7887,10 @@ CONFIG_PACKAGE_whereis=y
 # CONFIG_PACKAGE_ykpers is not set
 # CONFIG_PACKAGE_yq is not set
 # CONFIG_PACKAGE_zyxel-reset is not set
-# end of Utilities
-
+        list bt_tracker '# end of Utilities'
 #
 # Xorg
-#
-
+        list bt_tracker '#'
 #
 # Font-Utils
 #
