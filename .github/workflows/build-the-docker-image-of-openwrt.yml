@@ -27,6 +27,7 @@ on:
         type: choice
         options:
           - ophub/openwrt-aarch64:latest
+          - lspvic/openwrt-aarch64:latest
 
 env:
   TZ: America/New_York
