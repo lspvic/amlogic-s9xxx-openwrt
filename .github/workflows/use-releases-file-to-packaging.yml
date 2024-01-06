@@ -116,6 +116,7 @@ on:
           - s905x3-x96air
           - s905x3-x96air-gb
           - s905x3-x96max
+          - s905x4-hk1-rbox-x4
           - s912
           - s912-h96pro-plus
           - s912-m8s-pro
@@ -159,6 +160,7 @@ on:
           - 5.15.1
           - 6.1.1
           - 5.18.0
+          - 6.6.6
       auto_kernel:
         description: "Auto use the latest kernel"
         required: false
@@ -262,7 +264,7 @@ jobs:
 
       - name: Packaging OpenWrt
         if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
-        uses: ophub/amlogic-s9xxx-openwrt@main
+        uses: lspvic/amlogic-s9xxx-openwrt@main
         with:
           openwrt_path: openwrt/bin/targets/*/*/*rootfs.tar.gz
           openwrt_board: ${{ inputs.openwrt_board }}
